@@ -1,0 +1,153 @@
+# Command structure in Linux and linux commands:
+Command <options> <arguments>
+echo(command) -n(option) Hello(argument)
+Example: print home directory echo $HOME
+
+# man <command> - documentation of the command
+<command> --help
+Apropos <command> - searched through manpages for keywords <command>
+
+# Example of internal/built-in commands: echo, cd, pwd, mkdir etc
+# Example of external commands: mv, date, uptime, cp, runtime
+# How to determine if command internal/external: type echo
+
+# Print information on how long has the system been running for since last reboot: uptime 
+
+# Change the default reference folder (~): pushd/popd
+
+# ls options: 
+l - long
+a - all 
+t - time, creation order 
+tr - time, reverse order 
+h - human readable
+
+# whatis - 1 line description of what a command does
+
+# alias dt=date - 
+
+# See what shell is used: echo $SHELL
+
+# Change shell: sudo chsh –s(shell) /bin/[shell] [user]
+
+# Print environmental variables: env 
+
+# To set an environmental variable: export variable=value
+
+# To set an environmental variable persistent: Declare them in ~/.profile or ~/. pam_environment
+
+# See the path variable: echo $PATH
+
+# Check if the location of a command can be identified: which <command>
+
+# Print the bash prompt: echo $PS1
+
+# Changing the bash prompt: PS1=[……………]
+
+# Find Linux Kernel version: uname –r / uname –a 
+
+# Find version of the OS installed: cat /etc/*release* | grep release/version
+
+# How to list and get detailed information about hardware devices attached to the linux system:
+dmesg - tool used to display messages from an area of the Kernel called ring buffer
+udevadm info -query=path –name=/dev/sda5
+udevadm monitor
+
+# Check hardware specs: 
+- lspci
+- lsmem (–summary)
+- free –m(mb) –g(gb)
+- lsblk
+- lscpu
+- lshw
+
+# Check init process: ls –l /sbin/init 
+
+# Check the runlevel(operation mode): runlevel 
+
+Runlevel 1-5 (3 non graphical, 5 graphical)
+
+Systemd Target = runlevels
+Runlevel 3 =  multiuser.target = bootare de CLI
+Runlevel 5 = graphical.targer = bootare grafica
+
+# Check the operation mode (target, previous runlevel): 
+
+systemctl get-default = ls –ltr /etc/systemd/system/default.target care path de fapt este e symbolic link/shortcut catre /lib/systemd/system/graphical.target
+
+# Change the operation mode (target, previous runlevel)
+
+systemctl set-default [target] – example: systemctl set-default multi-user.target
+
+The term runlevels is used in the sysV init systems. These have been replaced by systemd targets in systemd based systems.
+
+The complete list of runlevels and the corresponding systemd targets can be seen below:
+runlevel 0 -> poweroff.target
+runlevel 1 -> rescue.target
+runlevel 2 -> multi-user.target
+runlevel 3 -> multi-user.target
+runlevel 4 -> multi-user.target
+runlevel 5 -> graphical.target
+runlevel 6 -> reboot.target
+
+# Package management:
+
+# RPM – Red Hat, CentOS, Fedora – can’t solve dependencies by itself
+- Package install with RPM: rpm – ivh [package].rpm #install #verbose
+- Package uninstall with RPM: rpm –e [package].rpm
+- Package Upgrade with RPM: rpm –Uvh …
+- Package query with RPM: rpm –q [package].rpm (ex. Find exact package name for wget rpm -qa | grep wget)
+- Package verifying with RPM: rpm –Vf <path to file>
+
+# YUM – Yellowdog update manager – RPM based distros – Software repo (/etc/yum.repos.d) – automatic dependency resolution
+
+- yum install/remove/update/upgrade
+- yum repolist
+- yum provides [command] – verify which package should be installed for a command to work
+
+# DPKG – Debian, Ubuntu, Linux Mint, Pure OS – can’t solve dependencies by itself
+- Package install/upgrade with DPKG: dpkg – i [package].deb 
+- Package uninstall with DPKG: dpkg –r [package].deb
+- Package list with DPKG: dpkg –l [package(#command)] fara deb
+- Package status with DPKG: dpkg –s [package] fara deb
+- Package verifying with DPKG: dpkg -p <path to file>
+
+#Apt install/remove/search/list | grep
+
+#Check file size: du (disk usage): du –sk(kilo) [file], du –sh [file] / ls –lh
+
+- Archiving:
+tar –cf [archive.tar] [file1]  #c-create #f-archive name
+ls –ltr [archive.tar]
+tar –tf [archive.tar] list archive elements
+tar –xf [archive.tar] extract contacts from tar ball
+tar –zcf [archive.tar] [file1]  - compress to reduce size 
+
+- Compressing/uncompressing: 
+bzip2 [filename.ext] / bunzip2 [filename]
+gzip [filename.ext] / gunzin [filename]
+xz [filename.ext] / unxz [filename]
+
+- Read files without decompressing them with: zcat/bzcat/xzcat
+
+- Searching for file and directories
+locate [filename.ext] – may need updatedb command
+find [target directory] –name [filename.ext]
+grep -i [name from a file(search element)] [filename.ext] #-I nu tine cont de C/c d/D DAR/dar
+grep –r “text” /home/user – search recursively for a pattern in a directory
+grep –v “text” [filename] – prints lines that don’t match a pattern/string
+grep –w “text” [filename] – prints the the lines that contain exactly “text”
+grep –vw “text” [filename} – prints the other lines that don’t contain “text” (ex: texts)
+Example file premier-league-table.txt. cat premier-league-table.txt:
+1.	Arsenal
+2.	Liverpool
+3.	Chelsea
+4.	Manchester City
+
+grep –A1 [Arsenal] [premier-league-table.txt] (1 after argument. Argument Arsenal, Liverpool after)
+1.	Arsenal
+2.	Liverpool
+grep –B1 [4] [premier-league-table.txt] (1 before argument. Argument 4, 3(Chelsea before))
+3.	Chelsea
+4.	Manchester City
+grep –A[n] –B[n] – could work combined
