@@ -1,0 +1,43 @@
+gcloud dns managed-zones create test-caz1 \
+    --description=test-caz \
+    --dns-name=mx.example.com.in-addr.arpa
+    --networks=vpc0-peer00,vpc1-peer11 \
+    --visibility=private \
+    --managed-reverse-lookup=true
+    
+    
+gcloud dns managed-zones create test-caz2 \
+    --description=test-caz \
+    --dns-name=mx.example.com.in-addr.arpa \
+    --networks=vpc0-peer00,vpc1-peer11 \
+    --visibility=private \
+    --managed-reverse-lookup=true
+    
+    
+    
+    
+gcloud auth login  
+gcloud config set project [PROJECT_ID]
+
+
+gcloud dns managed-zones create test     --description=test-caz     --dns-name=mx.example.com.in-addr.arpa
+
+gcloud dns managed-zones create test-caz3 \
+    --description=test-caz \
+    --dns-name=mx.example.com.in-addr.arpa \
+    --networks=vpc0-peer00,vpc1-peer11 \
+    --visibility=private \
+    --managed-reverse-lookup=true
+    
+gcloud dns managed-zones create test-caz4 --description=test-caz --dns-name=2.0.192.in-addr.arpa. --networks=vpc0-peer00,vpc1-peer11 --visibility=private --managed-reverse-lookup=true\
+
+
+resource "google_dns_managed_zone" "default" {
+  name           = "my-new-zone"
+  description    = "Example DNS reverse lookup"
+  provider       = google-beta
+  visibility     = "private"
+  dns_name       = "2.2.20.20.in-addr.arpa."
+  network       = "vpc0-peer00"
+  reverse_lookup = "true"
+}

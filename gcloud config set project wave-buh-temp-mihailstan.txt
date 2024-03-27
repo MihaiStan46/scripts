@@ -1,0 +1,15 @@
+gcloud config set project wave-buh-temp-mihailstan
+gcloud config set compute/region asia-east1 (you can change the region, it is just an example)
+gcloud services enable container.googleapis.com
+gcloud container clusters create [test-cluster] --num-nodes=3 (“3” is also an example)
+gcloud container clusters get-credentials [test-cluster]
+
+
+gcloud container subnets list-usable \
+    --network-project wave-buh-temp-mihailstan
+    
+    TEST V2
+    
+gcloud config set project wave-buh-temp-mihailstan
+gcloud config set compute/region asia-east1
+gcloud container clusters create k8s-cluster-1 --num-nodes=3 --network=vpc1-peer11 --subnet=test-peer1

@@ -1,0 +1,62 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  annotations:
+    ingress.kubernetes.io/backends: '{"k8s1-d70d5109-default-nginx-1-service-80-a2372ad4":"HEALTHY"}'
+    ingress.kubernetes.io/forwarding-rule: k8s2-fr-35n7lzdx-default-banica-dm6ul124
+    ingress.kubernetes.io/target-proxy: k8s2-tp-35n7lzdx-default-banica-dm6ul124
+    ingress.kubernetes.io/url-map: k8s2-um-35n7lzdx-default-banica-dm6ul124
+  creationTimestamp: "2023-06-20T09:50:41Z"
+  finalizers:
+  - networking.gke.io/ingress-finalizer-V2
+  generation: 1
+  managedFields:
+  - apiVersion: networking.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:spec:
+        f:defaultBackend:
+          .: {}
+          f:service:
+            .: {}
+            f:name: {}
+            f:port:
+              .: {}
+              f:number: {}
+    manager: GoogleCloudConsole
+    operation: Update
+    time: "2023-06-20T09:50:41Z"
+  - apiVersion: networking.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:ingress.kubernetes.io/backends: {}
+          f:ingress.kubernetes.io/forwarding-rule: {}
+          f:ingress.kubernetes.io/target-proxy: {}
+          f:ingress.kubernetes.io/url-map: {}
+        f:finalizers:
+          .: {}
+          v:"networking.gke.io/ingress-finalizer-V2": {}
+      f:status:
+        f:loadBalancer:
+          f:ingress: {}
+    manager: glbc
+    operation: Update
+    subresource: status
+    time: "2023-06-20T09:51:02Z"
+  name: banica
+  namespace: default
+  resourceVersion: "663624"
+  uid: f85b01f3-57ec-46ba-a817-4498917d2706
+spec:
+  defaultBackend:
+    service:
+      name: nginx-1-service
+      port:
+        number: 80
+status:
+  loadBalancer:
+    ingress:
+    - ip: 34.149.231.147

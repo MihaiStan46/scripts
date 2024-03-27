@@ -1,0 +1,139 @@
+# Create new storage bucket in the US multi-region
+# and settings for main_page_suffix and not_found_page
+resource "random_id" "bucket_prefix" {
+  byte_length = 8
+}
+
+resource "google_storage_bucket" "static_website" {
+  name          = "${random_id.bucket_prefix.hex}-static-website-bucket"
+  location      = "US"
+  storage_class = "STANDARD"
+  website {
+    main_page_suffix = "index.html"
+    not_found_page   = "404.html"
+  }
+}
+
+# Upload a simple index.html page to the bucket
+resource "google_storage_bucket_object" "indexpage" {
+  name         = "index.html"
+  content      = "<html><body>Hello World!</body></html>"
+  content_type = "text/html"
+  bucket       = google_storage_bucket.static_website.id
+}
+
+# Upload a simple 404 / error page to the bucket
+resource "google_storage_bucket_object" "errorpage" {
+  name         = "404.html"
+  content      = "<html><body>404!</body></html>"
+  content_type = "text/html"
+  bucket       = google_storage_bucket.static_website.id
+}
+
+# Make bucket public by granting allUsers READER access - N A MERS
+resource "google_storage_bucket_access_control" "public_rule" {
+  bucket = google_storage_bucket.static_website.id
+  role   = "READER"
+  entity = "allUsers"
+}
+
+gcloud storage buckets add-iam-policy-binding  gs://29518f1056e59acf-static-website-bucket/404.html --member=user:mihailstan@google.com --role=roles/storage.objectViewer
+
+
+
+
+# MANAGED SSL CERTIFICATES https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/compute_managed_ssl_certificate
+
+resource "google_compute_managed_ssl_certificate" "default" {
+  name = "test-cert"
+
+  managed {
+    domains = ["standevops.com."]
+  }
+}
+
+resource "google_compute_target_https_proxy" "default" {
+  name             = "test-proxy"
+  url_map          = google_compute_url_map.default.id
+  ssl_certificates = [google_compute_managed_ssl_certificate.default.id]
+}
+
+resource "google_compute_url_map" "default" {
+  name        = "url-map"
+  description = "a description"
+
+  default_service = google_compute_backend_service.default.id
+
+  host_rule {
+    hosts        = ["standevops.com."]
+    path_matcher = "allpaths"
+  }
+
+  path_matcher {
+    name            = "allpaths"
+    default_service = google_compute_backend_service.default.id
+
+    path_rule {
+      paths   = ["/*"]
+      service = google_compute_backend_service.default.id
+    }
+  }
+}
+
+resource "google_compute_backend_service" "default" {
+  name        = "backend-service"
+  port_name   = "http"
+  protocol    = "HTTP"
+  timeout_sec = 10
+
+  health_checks = [google_compute_http_health_check.default.id]
+}
+
+resource "google_compute_http_health_check" "default" {
+  name               = "http-health-check"
+  request_path       = "/"
+  check_interval_sec = 1
+  timeout_sec        = 1
+}
+
+resource "google_compute_global_forwarding_rule" "default" {
+  name       = "forwarding-rule"
+  target     = google_compute_target_https_proxy.default.id
+  port_range = 443
+}
+
+
+
+
+
+gcloud compute target-https-proxies describe test-proxy \
+    --global \
+    --format="get(sslCertificates)"
+    
+    
+    gcloud compute ssl-certificates describe test-cert \
+    --format="get(managed.domainStatus)"
+    
+gcloud dns record-sets transaction add RR_DATA \
+   --name=standevops.com \
+   --ttl=300 \
+   --type=A \
+   --zone=MANAGED_ZONE
+   
+   
+
+# Create new storage bucket in the US multi-region
+# and settings for main_page_suffix and not_found_page
+resource "random_id" "bucket_prefix" {
+  byte_length = 8
+}
+
+resource "google_storage_bucket" "static_website" {
+  name          = "${random_id.bucket_prefix.hex}-static-website-bucket"
+  location      = "US"
+  storage_class = "STANDARD"
+  website {
+    main_page_suffix = "index.html"
+    not_found_page   = "404.html"
+  }
+}

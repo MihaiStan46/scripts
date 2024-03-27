@@ -1,0 +1,37 @@
+#Command
+
+nslookup gcs-bucket-test2312321/Google_Cloud_Storage_logo.jpeg.europe-west1.wave-buh-temp-mihailstan.internal.cloudstorage.googleapis.com
+Server:         169.254.169.254
+Address:        169.254.169.254#53
+
+Non-authoritative answer:
+Name:   gcs-bucket-test2312321/Google_Cloud_Storage_logo.jpeg.europe-west1.wave-buh-temp-mihailstan.internal.cloudstorage.googleapis.com
+Address: 172.253.120.95
+Name:   gcs-bucket-test2312321/Google_Cloud_Storage_logo.jpeg.europe-west1.wave-buh-temp-mihailstan.internal.cloudstorage.googleapis.com
+Address: 2a00:1450:400c:c01::5f
+
+#Command
+
+nslookup gcs-bucket-test2312321.europe-west1.wave-buh-temp-mihailstan.internal.cloudstorage.googleapis.com
+Server:         169.254.169.254
+Address:        169.254.169.254#53
+
+Non-authoritative answer:
+Name:   gcs-bucket-test2312321.europe-west1.wave-buh-temp-mihailstan.internal.cloudstorage.googleapis.com
+Address: 172.253.120.95
+Name:   gcs-bucket-test2312321.europe-west1.wave-buh-temp-mihailstan.internal.cloudstorage.googleapis.com
+Address: 2a00:1450:400c:c01::5f
+
+#Command
+
+nslookup storage.googleapis.com
+
+
+Server:tan@facem169.254.169.254
+Address:        169.254.169.254#53
+
+Non-authoritative answer:
+Name:   storage.googleapis.com
+Address: 172.253.120.128
+Name:   storage.googleapis.com
+Address: 2a00:1450:400c:c01::80

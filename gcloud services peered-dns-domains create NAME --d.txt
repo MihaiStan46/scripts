@@ -1,0 +1,11 @@
+gcloud services peered-dns-domains create NAME --dns-suffix=DNS_SUFFIX --network=NETWORK --service=SERVICE
+
+
+
+gcloud services peered-dns-domains create test-caz-fmr --network=vpc0-peer00 --service=apigee.googleapis.com --dns-suffix=mx.example.com.
+
+
+
+
+
+gcloud services peered-dns-domains create test-caz-fmr --network=vpc0-peer00 --service=projects/916678637427/global/networks/vpc0-peer00/apigee.googleapis.com --dns-suffix=mx.example.com.

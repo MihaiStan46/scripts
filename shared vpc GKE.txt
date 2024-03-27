@@ -1,0 +1,46 @@
+shared vpc GKE
+
+host project
+
+gcloud projects describe wave-buh-temp-mihailstan --format="value(projectNumber)"
+
+id 	wave-buh-temp-mihailstan
+name 	wave-buh-temp-mihailstan
+number 916678637427
+
+service proj 1
+
+gcloud projects describe test-environment-383808 --format="value(projectNumber)"
+
+id 	test-environment-383808
+name test-environment
+number 31995151848
+
+
+service proj 2
+
+gcloud projects describe test-environmentb --format="value(projectNumber)"
+
+id 	test-environmentb
+name test-environmentB
+number 886098349559
+
+Enabling Shared VPC and granting roles ---- AICI a trebui sa fac si din USER interface pentru service proj 2 
+
+gcloud projects add-iam-policy-binding wave-buh-temp-mihailstan \
+    --member=serviceAccount:service-886098349559@container-engine-robot.iam.gserviceaccount.com \
+    --role=roles/compute.securityAdmin
+
+
+
+CREATING CLUSTER =========== COMANDA BUNA !!!!!!!!!!!!!
+
+gcloud container clusters create-auto tier-1-cluster \
+    --project=test-environment-383808 \
+    --region=us-central1
+    --zone=us-central1-a \
+    --network=projects/wave-buh-temp-mihailstan/global/networks/shared-net \
+    --subnetwork=projects/wave-buh-temp-mihailstan/regions/us-central1/subnetworks/tier-1 \
+    --cluster-secondary-range-name=tier-1-pods \
+    --services-secondary-range-name=tier-1-services \
+    --enable-autopilot

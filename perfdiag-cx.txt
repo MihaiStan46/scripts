@@ -1,0 +1,270 @@
+{
+  "sysinfo": {
+    "boto_https_enabled": true,
+    "using_proxy": false,
+    "ip_address": "10.132.0.20",
+    "tempdir": "/tmp",
+    "gmt_timestamp": "Wed, 10 May 2023 15:04:47 +0000",
+    "googserv_route": "",
+    "on_gce": true,
+    "gce_instance_info": "",
+    "bucket_location": "EUROPE-WEST1",
+    "bucket_storageClass": "STANDARD",
+    "google_host_dns_latency": 0.0007803440093994141,
+    "googserv_ips": [
+      "172.253.120.128"
+    ],
+    "googserv_hostnames": [
+      "wd-in-f128.1e100.net"
+    ],
+    "dns_o-o_ip": "",
+    "google_host_connect_latencies": {
+      "172.253.120.128": 0.0008628368377685547
+    },
+    "cpu_count": 4,
+    "load_avg": [
+      0.06,
+      0.01,
+      0.0
+    ],
+    "meminfo": {
+      "mem_total": 16392464000,
+      "mem_free": 15885800000,
+      "mem_buffers": 34336000,
+      "mem_cached": 173216000
+    },
+    "gsutil_config": {
+      "CHECK_HASH_ALWAYS": "always",
+      "CHECK_HASH_IF_FAST_ELSE_FAIL": "if_fast_else_fail",
+      "CHECK_HASH_IF_FAST_ELSE_SKIP": "if_fast_else_skip",
+      "CHECK_HASH_NEVER": "never",
+      "DEFAULT_GZIP_COMPRESSION_LEVEL": 9,
+      "DEFAULT_MAX_UPLOAD_COMPRESSION_BUFFER_SIZE": "2G",
+      "DEFAULT_PARALLEL_COMPOSITE_UPLOAD_COMPONENT_SIZE": "50M",
+      "DEFAULT_PARALLEL_COMPOSITE_UPLOAD_THRESHOLD": "0",
+      "DEFAULT_PARALLEL_PROCESS_COUNT": 4,
+      "DEFAULT_PARALLEL_THREAD_COUNT": 5,
+      "DEFAULT_SLICED_OBJECT_DOWNLOAD_COMPONENT_SIZE": "200M",
+      "DEFAULT_SLICED_OBJECT_DOWNLOAD_MAX_COMPONENTS": 4,
+      "DEFAULT_SLICED_OBJECT_DOWNLOAD_THRESHOLD": "150M",
+      "DEFAULT_TASK_ESTIMATION_THRESHOLD": 30000,
+      "GOOG_CLOUD_CONSOLE_URI": "https://cloud.google.com/console#/project",
+      "HAS_CRYPTO": true,
+      "MAX_COMPOSE_ARITY": 32
+    },
+    "tcp_proc_values": {
+      "rmem_default": "212992",
+      "rmem_max": "212992",
+      "wmem_default": "212992",
+      "wmem_max": "212992",
+      "tcp_timestamps": "1",
+      "tcp_sack": "1",
+      "tcp_window_scaling": "1"
+    },
+    "netstat_start": {
+      "tcp_retransmit": 0,
+      "tcp_received": 631,
+      "tcp_sent": 577
+    },
+    "disk_counters_start": {
+      "sda1": [
+        6682,
+        1635,
+        196749312,
+        39343104,
+        3708,
+        1866
+      ],
+      "sda14": [
+        40,
+        0,
+        163840,
+        0,
+        7,
+        0
+      ],
+      "sda15": [
+        95,
+        0,
+        2155008,
+        0,
+        15,
+        0
+      ]
+    },
+    "netstat_end": {
+      "tcp_retransmit": 0,
+      "tcp_received": 9204,
+      "tcp_sent": 20552
+    },
+    "disk_counters_end": {
+      "sda1": [
+        6682,
+        1635,
+        196749312,
+        39343104,
+        3708,
+        1866
+      ],
+      "sda14": [
+        40,
+        0,
+        163840,
+        0,
+        7,
+        0
+      ],
+      "sda15": [
+        95,
+        0,
+        2155008,
+        0,
+        15,
+        0
+      ]
+    }
+  },
+  "bucket_uri": "gs://mk-mpd-cdvr-staging-media/",
+  "json_format": "perfdiag",
+  "metadata": {},
+  "latency": {
+    "UPLOAD_0": [
+      0.06334447860717773,
+      0.06123018264770508,
+      0.1188042163848877,
+      0.05626225471496582,
+      0.05768084526062012
+    ],
+    "METADATA_0": [
+      0.022134780883789062,
+      0.02824544906616211,
+      0.021428346633911133,
+      0.018630027770996094,
+      0.021363019943237305
+    ],
+    "DOWNLOAD_0": [
+      0.032867431640625,
+      0.03835129737854004,
+      0.02991032600402832,
+      0.03305983543395996,
+      0.0383448600769043
+    ],
+    "DELETE_0": [
+      0.031595468521118164,
+      0.03761792182922363,
+      0.030295372009277344,
+      0.03392529487609863,
+      0.027390241622924805
+    ],
+    "UPLOAD_1024": [
+      0.07687234878540039,
+      0.06253170967102051,
+      0.06600522994995117,
+      0.0974111557006836,
+      0.06866884231567383
+    ],
+    "METADATA_1024": [
+      0.022345304489135742,
+      0.02146315574645996,
+      0.02019500732421875,
+      0.017747163772583008,
+      0.019165992736816406
+    ],
+    "DOWNLOAD_1024": [
+      0.03217911720275879,
+      0.055922508239746094,
+      0.05534243583679199,
+      0.06570744514465332,
+      0.04810786247253418
+    ],
+    "DELETE_1024": [
+      0.0428776741027832,
+      0.03121471405029297,
+      0.032228946685791016,
+      0.032199859619140625,
+      0.0271456241607666
+    ],
+    "UPLOAD_102400": [
+      0.0747368335723877,
+      0.08334732055664062,
+      0.07712435722351074,
+      0.06205940246582031,
+      0.06477904319763184
+    ],
+    "METADATA_102400": [
+      0.020949125289916992,
+      0.016208410263061523,
+      0.033518314361572266,
+      0.019206762313842773,
+      0.02088785171508789
+    ],
+    "DOWNLOAD_102400": [
+      0.07461905479431152,
+      0.050794363021850586,
+      0.060332536697387695,
+      0.05193591117858887,
+      0.048972368240356445
+    ],
+    "DELETE_102400": [
+      0.0254666805267334,
+      0.032324790954589844,
+      0.025148391723632812,
+      0.033715248107910156,
+      0.035933494567871094
+    ],
+    "UPLOAD_1048576": [
+      0.10441303253173828,
+      0.10324931144714355,
+      0.09838581085205078,
+      0.10694527626037598,
+      0.09634995460510254
+    ],
+    "METADATA_1048576": [
+      0.01851820945739746,
+      0.01957249641418457,
+      0.022082090377807617,
+      0.021063804626464844,
+      0.020671367645263672
+    ],
+    "DOWNLOAD_1048576": [
+      0.05757021903991699,
+      0.08684182167053223,
+      0.0661928653717041,
+      0.06771421432495117,
+      0.06323099136352539
+    ],
+    "DELETE_1048576": [
+      0.027479887008666992,
+      0.03540849685668945,
+      0.024790287017822266,
+      0.03026413917541504,
+      0.028882503509521484
+    ]
+  },
+  "read_throughput": {
+    "file_size": 1048576,
+    "processes": 1,
+    "threads": 1,
+    "parallelism": null,
+    "time_took": 0.24480533599853516,
+    "total_bytes_copied": 5242880,
+    "bytes_per_second": 21416526.63989061
+  },
+  "write_throughput": {
+    "file_size": 1048576,
+    "processes": 1,
+    "threads": 1,
+    "parallelism": null,
+    "gzip_encoded_writes": false,
+    "gzip_compression_ratio": 100,
+    "time_took": 0.5425634384155273,
+    "total_bytes_copied": 5242880,
+    "bytes_per_second": 9663164.947699057
+  },
+  "total_requests": 94,
+  "request_errors": 0,
+  "error_responses_by_code": {},
+  "connection_breaks": 0,
+  "gsutil_version": "5.12",
+  "boto_version": "2.49.0"
+}

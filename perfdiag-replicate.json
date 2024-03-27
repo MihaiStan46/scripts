@@ -1,0 +1,342 @@
+mihailstan@facem-teste-gcs:~$ gsutil perfdiag gs://gcs-bucket-test2312321/
+Number of iterations to run: 5
+Base bucket URI: gs://gcs-bucket-test2312321/
+Number of processes: 1
+Number of threads: 1
+Parallelism strategy: None
+Throughput file size: 1 MiB
+Diagnostics to run: wthru, lat, rthru
+Gzip compression ratio: 100
+Gzip transport encoding writes: False
+WARNING: Argument `NAME` is deprecated. Use `--filter="name=( 'NAME' ... )"` instead.
+
+Running latency iteration 1...
+
+File of size 0 B located on disk at '/tmp/gsutil_test_filefhx8amgd.bin' being diagnosed in the cloud at 'gs://gcs-bucket-test2312321/gsutil_test_filefhx8amgd.bin'.
+UPLOAD_0 starting...
+UPLOAD_0 done.
+METADATA_0 starting...
+METADATA_0 done.
+DOWNLOAD_0 starting...
+DOWNLOAD_0 done.
+DELETE_0 starting...
+DELETE_0 done.
+
+File of size 1 KiB located on disk at '/tmp/gsutil_test_fileinisazss.bin' being diagnosed in the cloud at 'gs://gcs-bucket-test2312321/gsutil_test_fileinisazss.bin'.
+UPLOAD_1024 starting...
+UPLOAD_1024 done.
+METADATA_1024 starting...
+METADATA_1024 done.
+DOWNLOAD_1024 starting...
+DOWNLOAD_1024 done.
+DELETE_1024 starting...
+DELETE_1024 done.
+
+File of size 100 KiB located on disk at '/tmp/gsutil_test_file3u8lg_qq.bin' being diagnosed in the cloud at 'gs://gcs-bucket-test2312321/gsutil_test_file3u8lg_qq.bin'.
+UPLOAD_102400 starting...
+UPLOAD_102400 done.
+METADATA_102400 starting...
+METADATA_102400 done.
+DOWNLOAD_102400 starting...
+DOWNLOAD_102400 done.
+DELETE_102400 starting...
+DELETE_102400 done.
+
+File of size 1 MiB located on disk at '/tmp/gsutil_test_file9rw5f9fm.bin' being diagnosed in the cloud at 'gs://gcs-bucket-test2312321/gsutil_test_file9rw5f9fm.bin'.
+UPLOAD_1048576 starting...
+UPLOAD_1048576 done.
+METADATA_1048576 starting...
+METADATA_1048576 done.
+DOWNLOAD_1048576 starting...
+DOWNLOAD_1048576 done.
+DELETE_1048576 starting...
+DELETE_1048576 done.
+
+Running latency iteration 2...
+
+File of size 0 B located on disk at '/tmp/gsutil_test_filefhx8amgd.bin' being diagnosed in the cloud at 'gs://gcs-bucket-test2312321/gsutil_test_filefhx8amgd.bin'.
+UPLOAD_0 starting...
+UPLOAD_0 done.
+METADATA_0 starting...
+METADATA_0 done.
+DOWNLOAD_0 starting...
+DOWNLOAD_0 done.
+DELETE_0 starting...
+DELETE_0 done.
+
+File of size 1 KiB located on disk at '/tmp/gsutil_test_fileinisazss.bin' being diagnosed in the cloud at 'gs://gcs-bucket-test2312321/gsutil_test_fileinisazss.bin'.
+UPLOAD_1024 starting...
+UPLOAD_1024 done.
+METADATA_1024 starting...
+METADATA_1024 done.
+DOWNLOAD_1024 starting...
+DOWNLOAD_1024 done.
+DELETE_1024 starting...
+DELETE_1024 done.
+
+File of size 100 KiB located on disk at '/tmp/gsutil_test_file3u8lg_qq.bin' being diagnosed in the cloud at 'gs://gcs-bucket-test2312321/gsutil_test_file3u8lg_qq.bin'.
+UPLOAD_102400 starting...
+UPLOAD_102400 done.
+METADATA_102400 starting...
+METADATA_102400 done.
+DOWNLOAD_102400 starting...
+DOWNLOAD_102400 done.
+DELETE_102400 starting...
+DELETE_102400 done.
+
+File of size 1 MiB located on disk at '/tmp/gsutil_test_file9rw5f9fm.bin' being diagnosed in the cloud at 'gs://gcs-bucket-test2312321/gsutil_test_file9rw5f9fm.bin'.
+UPLOAD_1048576 starting...
+UPLOAD_1048576 done.
+METADATA_1048576 starting...
+METADATA_1048576 done.
+DOWNLOAD_1048576 starting...
+DOWNLOAD_1048576 done.
+DELETE_1048576 starting...
+DELETE_1048576 done.
+
+Running latency iteration 3...
+
+File of size 0 B located on disk at '/tmp/gsutil_test_filefhx8amgd.bin' being diagnosed in the cloud at 'gs://gcs-bucket-test2312321/gsutil_test_filefhx8amgd.bin'.
+UPLOAD_0 starting...
+UPLOAD_0 done.
+METADATA_0 starting...
+METADATA_0 done.
+DOWNLOAD_0 starting...
+DOWNLOAD_0 done.
+DELETE_0 starting...
+DELETE_0 done.
+
+File of size 1 KiB located on disk at '/tmp/gsutil_test_fileinisazss.bin' being diagnosed in the cloud at 'gs://gcs-bucket-test2312321/gsutil_test_fileinisazss.bin'.
+UPLOAD_1024 starting...
+UPLOAD_1024 done.
+METADATA_1024 starting...
+METADATA_1024 done.
+DOWNLOAD_1024 starting...
+DOWNLOAD_1024 done.
+DELETE_1024 starting...
+DELETE_1024 done.
+
+File of size 100 KiB located on disk at '/tmp/gsutil_test_file3u8lg_qq.bin' being diagnosed in the cloud at 'gs://gcs-bucket-test2312321/gsutil_test_file3u8lg_qq.bin'.
+UPLOAD_102400 starting...
+UPLOAD_102400 done.
+METADATA_102400 starting...
+METADATA_102400 done.
+DOWNLOAD_102400 starting...
+DOWNLOAD_102400 done.
+DELETE_102400 starting...
+DELETE_102400 done.
+
+File of size 1 MiB located on disk at '/tmp/gsutil_test_file9rw5f9fm.bin' being diagnosed in the cloud at 'gs://gcs-bucket-test2312321/gsutil_test_file9rw5f9fm.bin'.
+UPLOAD_1048576 starting...
+UPLOAD_1048576 done.
+METADATA_1048576 starting...
+METADATA_1048576 done.
+DOWNLOAD_1048576 starting...
+DOWNLOAD_1048576 done.
+DELETE_1048576 starting...
+DELETE_1048576 done.
+
+Running latency iteration 4...
+
+File of size 0 B located on disk at '/tmp/gsutil_test_filefhx8amgd.bin' being diagnosed in the cloud at 'gs://gcs-bucket-test2312321/gsutil_test_filefhx8amgd.bin'.
+UPLOAD_0 starting...
+UPLOAD_0 done.
+METADATA_0 starting...
+METADATA_0 done.
+DOWNLOAD_0 starting...
+DOWNLOAD_0 done.
+DELETE_0 starting...
+DELETE_0 done.
+
+File of size 1 KiB located on disk at '/tmp/gsutil_test_fileinisazss.bin' being diagnosed in the cloud at 'gs://gcs-bucket-test2312321/gsutil_test_fileinisazss.bin'.
+UPLOAD_1024 starting...
+UPLOAD_1024 done.
+METADATA_1024 starting...
+METADATA_1024 done.
+DOWNLOAD_1024 starting...
+DOWNLOAD_1024 done.
+DELETE_1024 starting...
+DELETE_1024 done.
+
+File of size 100 KiB located on disk at '/tmp/gsutil_test_file3u8lg_qq.bin' being diagnosed in the cloud at 'gs://gcs-bucket-test2312321/gsutil_test_file3u8lg_qq.bin'.
+UPLOAD_102400 starting...
+UPLOAD_102400 done.
+METADATA_102400 starting...
+METADATA_102400 done.
+DOWNLOAD_102400 starting...
+DOWNLOAD_102400 done.
+DELETE_102400 starting...
+DELETE_102400 done.
+
+File of size 1 MiB located on disk at '/tmp/gsutil_test_file9rw5f9fm.bin' being diagnosed in the cloud at 'gs://gcs-bucket-test2312321/gsutil_test_file9rw5f9fm.bin'.
+UPLOAD_1048576 starting...
+UPLOAD_1048576 done.
+METADATA_1048576 starting...
+METADATA_1048576 done.
+DOWNLOAD_1048576 starting...
+DOWNLOAD_1048576 done.
+DELETE_1048576 starting...
+DELETE_1048576 done.
+
+Running latency iteration 5...
+
+File of size 0 B located on disk at '/tmp/gsutil_test_filefhx8amgd.bin' being diagnosed in the cloud at 'gs://gcs-bucket-test2312321/gsutil_test_filefhx8amgd.bin'.
+UPLOAD_0 starting...
+UPLOAD_0 done.
+METADATA_0 starting...
+METADATA_0 done.
+DOWNLOAD_0 starting...
+DOWNLOAD_0 done.
+DELETE_0 starting...
+DELETE_0 done.
+
+File of size 1 KiB located on disk at '/tmp/gsutil_test_fileinisazss.bin' being diagnosed in the cloud at 'gs://gcs-bucket-test2312321/gsutil_test_fileinisazss.bin'.
+UPLOAD_1024 starting...
+UPLOAD_1024 done.
+METADATA_1024 starting...
+METADATA_1024 done.
+DOWNLOAD_1024 starting...
+DOWNLOAD_1024 done.
+DELETE_1024 starting...
+DELETE_1024 done.
+
+File of size 100 KiB located on disk at '/tmp/gsutil_test_file3u8lg_qq.bin' being diagnosed in the cloud at 'gs://gcs-bucket-test2312321/gsutil_test_file3u8lg_qq.bin'.
+UPLOAD_102400 starting...
+UPLOAD_102400 done.
+METADATA_102400 starting...
+METADATA_102400 done.
+DOWNLOAD_102400 starting...
+DOWNLOAD_102400 done.
+DELETE_102400 starting...
+DELETE_102400 done.
+
+File of size 1 MiB located on disk at '/tmp/gsutil_test_file9rw5f9fm.bin' being diagnosed in the cloud at 'gs://gcs-bucket-test2312321/gsutil_test_file9rw5f9fm.bin'.
+UPLOAD_1048576 starting...
+UPLOAD_1048576 done.
+METADATA_1048576 starting...
+METADATA_1048576 done.
+DOWNLOAD_1048576 starting...
+DOWNLOAD_1048576 done.
+DELETE_1048576 starting...
+DELETE_1048576 done.
+
+Running read throughput tests  (5 objects of size 1 MiB)
+
+Running write throughput tests  (5 objects of size 1 MiB)
+
+==============================================================================
+                              DIAGNOSTIC RESULTS                              
+==============================================================================
+
+------------------------------------------------------------------------------
+                                   Latency                                    
+------------------------------------------------------------------------------
+Operation       Size  Trials  Mean (ms)  Std Dev (ms)  Median (ms)  90th % (ms)
+=========  =========  ======  =========  ============  ===========  ===========
+   Delete        0 B       5       46.1           4.9         45.6         51.8 
+   Delete      1 KiB       5       55.6          24.8         46.2         82.2 
+   Delete    100 KiB       5       48.2           3.6         48.4         51.9 
+   Delete      1 MiB       5       47.6           4.7         46.2         53.1 
+ Download        0 B       5       45.9           6.2         42.3         53.6 
+ Download      1 KiB       5       75.4          21.7         64.9        101.9 
+ Download    100 KiB       5       94.7          63.8         67.3        161.1 
+ Download      1 MiB       5       89.8          11.5         92.6         99.5 
+ Metadata        0 B       5       24.1           2.2         23.7         26.5 
+ Metadata      1 KiB       5       26.9           2.3         26.1         29.7 
+ Metadata    100 KiB       5       30.3           6.3         26.5         38.1 
+ Metadata      1 MiB       5       28.8           5.4         27.7         34.8 
+   Upload        0 B       5       78.0          10.0         71.2         90.6 
+   Upload      1 KiB       5       91.5          15.4         83.6        108.6 
+   Upload    100 KiB       5       99.4           6.7         96.4        107.0 
+   Upload      1 MiB       5      207.0         127.0        127.4        356.5 
+
+------------------------------------------------------------------------------
+                               Write Throughput                               
+------------------------------------------------------------------------------
+Copied 5 1 MiB file(s) for a total transfer size of 5 MiB.
+Write throughput: 65.8 Mibit/s.
+Parallelism strategy: None
+
+------------------------------------------------------------------------------
+                               Read Throughput                                
+------------------------------------------------------------------------------
+Copied 5 1 MiB file(s) for a total transfer size of 5 MiB.
+Read throughput: 110.4 Mibit/s.
+Parallelism strategy: None
+
+------------------------------------------------------------------------------
+                              System Information                              
+------------------------------------------------------------------------------
+IP Address: 
+  10.132.0.17
+Temporary Directory: 
+  /tmp
+Bucket URI: 
+  gs://gcs-bucket-test2312321/
+gsutil Version: 
+  5.23
+boto Version: 
+  2.49.0
+Measurement time: 
+ 2023-05-11 10:29:45 AM 
+Running on GCE: 
+  True
+GCE Instance:
+        NAME             ZONE            MACHINE_TYPE   PREEMPTIBLE  INTERNAL_IP  EXTERNAL_IP   STATUS
+        facem-teste-gcs  europe-west1-b  n2-standard-4               10.132.0.17  34.79.41.113  RUNNING
+
+Bucket location: 
+  EUROPE-WEST1
+Bucket storage class: 
+  STANDARD
+Google Server: 
+  ns1
+Google Server IP Addresses: 
+  172.253.120.128
+Google Server Hostnames: 
+  wd-in-f128.1e100.net
+Google DNS thinks your IP is: 
+  74.125.47.134
+CPU Count: 
+  4
+CPU Load Average: 
+  [0.25, 0.06, 0.02]
+Total Memory: 
+  15.27 GiB
+Free Memory: 
+  14.98 GiB
+TCP segments sent during test:
+  19432
+TCP segments received during test:
+  7290
+TCP segments retransmit during test:
+  0
+Disk Counter Deltas:
+    disk    reads   writes   rbytes   wbytes    rtime    wtime 
+   sda1        0       46        0  7593984        0      162 
+  sda14        0        0        0        0        0        0 
+  sda15        0        0        0        0        0        0 
+TCP /proc values:
+    rmem_default = 212992
+   rmem_max = 212992
+   wmem_default = 212992
+   wmem_max = 212992
+   tcp_timestamps = 1
+   tcp_sack = 1
+   tcp_window_scaling = 1
+Boto HTTPS Enabled: 
+  True
+Requests routed through proxy: 
+  False
+Latency of the DNS lookup for Google Storage server (ms): 
+  0.8
+Latencies connecting to Google Storage server IPs (ms):
+  172.253.120.128 = 1.2
+
+------------------------------------------------------------------------------
+                          In-Process HTTP Statistics                          
+------------------------------------------------------------------------------
+Total HTTP requests made: 94
+HTTP 5xx errors: 0
+HTTP connections broken: 0
+Availability: 100%

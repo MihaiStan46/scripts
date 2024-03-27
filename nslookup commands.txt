@@ -1,0 +1,4 @@
+nslookup [BUCKET_NAME].[REGION/LOCATION].[PROJECT_ID].internal.cloudstorage.googleapis.com
+nslookup gcs-bucket-test2312321/Google_Cloud_Storage_logo.jpeg.europe-west1.wave-buh-temp-mihailstan.internal.cloudstorage.googleapis.com
+
+gsutil perfdiag -b gs://gcs-bucket-test2312321/
